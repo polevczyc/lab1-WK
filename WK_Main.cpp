@@ -248,7 +248,7 @@ int main()
     // 3.2 mieszanie
     CreateWindowAt("Blended Image", 900, 335);
     std::pair<Mat*, Mat* > imagesToBlend(&srcImage, &maskedImage);
-    createTrackbar("Alpha", "Blended Image", &blend_alpha_value, 100, BlendCallback, &imagesToBlend);
+    createTrackbar("Blend", "Blended Image", &blend_alpha_value, 100, BlendCallback, &imagesToBlend);
     BlendCallback(0, &imagesToBlend);
 
     // 4. histogram
